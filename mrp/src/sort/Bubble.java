@@ -12,7 +12,7 @@ public class Bubble {
 
 	Bubble() {
 
-		for (int n = 0; n < Sort.test; n++) {
+		for (int n = 0; n < data.Sort.test.length; n++) {
 			for (int i = 0; i < test.length - 1; i++) {
 				if (test[i] > test[i + 1]) {
 					int sts;
