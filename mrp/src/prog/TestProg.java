@@ -37,17 +37,17 @@ public class TestProg {
 
 		if(s1 instanceof Person) {
 			if(s1 instanceof Student) {
-				
+				Person p3 = s1;
+				Person.getPersonenListe().add(p3);
 			}
 		}
 		
-		Person p3 = s1;
+		
 		// System.out.println(p3);
 		// System.out.println(p3 instanceof Student);
 		// System.out.println(p3 instanceof Person);
 
-		Person.getPersonenListe().add(p3);
-
+		
 		// System.out.println(p1);
 		// System.out.println(p2);
 
