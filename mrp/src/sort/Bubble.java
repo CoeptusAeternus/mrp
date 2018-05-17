@@ -1,6 +1,6 @@
 package sort;
 
-import data.Sort;
+//import data.Sort;
 
 public class Bubble {
 
@@ -32,7 +32,7 @@ public class Bubble {
 	protected void prnt(int[] outp) {
 		// System.out.println(outp.length);
 		for (int s = 0; s < outp.length - 1; s++) {
-				System.out.print(outp[s] + ",");
+				System.out.print(test[s] + ",");
 
 			if (s == outp.length - 2)
 					System.out.print(outp[s + 1]);
