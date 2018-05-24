@@ -9,50 +9,60 @@ public class Quick {
 	}
 
 	Quick() {
-		sort(0, 0);
 
-	}
+		sort(0, test.length - 1);
 
-	public void sort(int r, int l) {
-		int f;
-		l = 0;
-		r = test.length - 1;
-
-		if (l < r) {
-
-			f = factor(r, l);
-			sort(l, f);
-			sort(f + 1, r);
-		}
-		
-		System.out.println("test");
 		for (int s = 0; s < test.length - 1; s++) {
 			System.out.print(test[s] + ",");
-		}
+		}System.out.print(test[test.length-1]);
+
 	}
 
-	public int factor(int l, int r) {
+	public void sort(int l, int r) {
 
-		int i, j, p, temp;
+		if (l < r) {
+			teiler = quicksort(l, r);
+			sort(l, teiler);
+			sort(teiler + 1, r);
+
+		}
+
+	}
+
+	public int quicksort(int l, int r) {
+
+		int i, j, pivot, swap;
 
 		i = l;
-		j = r + 1;
-		p = test[r];
+		j = r - 1;
+		pivot = test[r];
 
-		while (test[i] < p && i < r - 1) {
-			i++;
+		while (i < j) {
+
+			while (test[i] < pivot && i < r - 1)
+				i++;
+
+			while (test[j] >= pivot && j > l)
+				j--;
+
+			if (i < j) {
+				swap = test[i];
+				test[i] = test[j];
+				test[j] = swap;
+			}
 		}
-		while (test[j] >= p && j > l) {
-			j--;
-		}
-		if (i < j) {
-			temp = test[i];
-			test[i] = test[j];
-			test[j] = temp;
+
+		if (test[i] > pivot) {
+			swap = test[i];
+			test[i] = test[r];
+			test[r] = swap;
 		}
 
 		return i;
+
 	}
+
+	private int teiler;
 
 	public int[] test = { 5, 4, 26, 4, 3, 27, 5, 3, 14, 32, 5, 3, 2, 53, 2, 5, 6, 33, 6 };
 
