@@ -12,9 +12,12 @@ public class Quick {
 
 		sort(0, test.length - 1);
 
-		for (int s = 0; s < test.length - 1; s++) {
-			System.out.print(test[s] + ",");
-		}System.out.print(test[test.length-1]);
+		for (int s = 0; s < test.length; s++) {
+			System.out.print(test[s]);
+			if (s < test.length - 1)
+				System.out.print(",");
+//			System.out.print(test[test.length - 1]);
+		}
 
 	}
 
