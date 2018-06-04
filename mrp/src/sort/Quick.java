@@ -16,7 +16,6 @@ public class Quick {
 			System.out.print(test[s]);
 			if (s < test.length - 1)
 				System.out.print(",");
-//			System.out.print(test[test.length - 1]);
 		}
 
 	}
